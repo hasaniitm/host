@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 238, 238);
+    padding-left: clamp(1rem, 2vw, 2rem);
+    padding-right: clamp(1rem, 2vw, 2rem);
+    padding-top: clamp(.5rem, 1vw, 1rem);
+    padding-bottom: clamp(.5rem, 1vw, 1rem);
+    position: sticky;
+    z-index: 1000;
+    top: 0%;
+}
+
+.navbar #navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.navbar #navlink img {
+    width: clamp(2rem, 3vw, 10rem);
+    height: clamp(2rem, 3vw, 10rem);
+    object-fit: cover;
+}
+
+.navbar #navlink #b {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.navbar ul {
+    display: flex;
+    gap: clamp(1rem, 1vw, 1.2rem);
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: black;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: black;
+}
+
+.navbar ul li a:hover {
+    color: blue;
+}
+
+.navbar ul i {
+    display: none;
+}
+
+.navbar ul i {
+    cursor: pointer;
+}
+
+.nac1 {
+    display: none;
+}
+
+.navbar2 {
+    min-height: 100vh;
+    width: 70%;
+     background-color: rgb(245, 238, 238);
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:row;
+    gap: 1rem;
+    padding: 2rem;
+    animation: move .5s ease-in-out;
+    z-index:999;
+}
+
+@keyframes move {
+    from {
+        translate: 70%;
+    }
+
+    to {
+        translate: 0;
+    }
+}
+
+.navbar2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 50px;
+}
+
+.navbar2 ul li {
+    list-style: none;
+    font-family: 'Segoe UI';
+
+}
+
+.navbar2 ul li a {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
+
+
+
+@media screen and (max-width:612px) {
+    .navbar ul li {
+        display: none;
+
+    }
+
+    .navbar ul i {
+        display: block;
+    }
+}
+
+#h2 {
+    height: clamp(15rem, 40vw, 25rem);
+    background-color: rgb(13, 13, 85);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#h2 #div2 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.8rem, 4vw, 1.5rem);
+}
+
+#h2 #div2 h3 {
+    font-size: clamp(1rem, 5vw, 3rem);
+    color: white;
+}
+
+#h2 #div2 p {
+    font-size: clamp(0.6rem, 1.3vw, 2rem);
+    color: white;
+    font-family: serif;
+    font-weight: lighter;
+    font-style: normal;
+    text-align: center;
+}
+
+#div2 #btn {
+    background-color: rgb(241, 239, 239);
+    color: rgb(13, 13, 85);
+    font-size: clamp(.3rem, 3vw, 1.5rem);
+    padding-left: clamp(0.4rem, 1vw, 1.4rem);
+    padding-right: clamp(0.4rem, 1vw, 1.4rem);
+    padding-top: clamp(0.2rem, .5vw, .7rem);
+    padding-bottom: clamp(0.2rem, .5vw, .7rem);
+    border-radius: clamp(.5rem, 1vw, 1rem);
+    border-color: white;
+}
+
+#div2 #btn:hover {
+    background-color: red;
+
+}
+
+#boxes {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: clamp(.6rem, 2vw, 2rem);
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: clamp(15rem, 40vw, 50rem);
+    height: clamp(10rem, 30vw, 15rem);
+    border-radius: clamp(.6rem, 1vw, 1.2rem);
+    background-color: rgb(46, 46, 180);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.alg {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.data h4 {
+    font-size: clamp(.5rem, 3vw, 1.5rem);
+    font-family: serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.data p {
+    font-size: clamp(0.3rem, 2.8vw, 1rem);
+    font-family: serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.box .alg .arc h2 a {
+    text-decoration: none;
+    font-family: serif;
+    color: white;
+    font-size: clamp(.5rem, 3vw, 1.5rem);
+}
+
+.box {
+    color: white;
+    font-family: serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.rate h4 {
+    font-size: clamp(0.4rem, 2.3vw, 1rem);
+}
+
+.rate h2 {
+
+    font-size: clamp(.5rem, 3vw, 1.5rem);
+    font-family: serif;
+}
+
+.maindata {
+    max-width: 100%;
+    height: clamp(15rem, 40vw, 25rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(223, 214, 214, 0.144);
+}
+
+.maindata1 {
+    width: 50%;
+    height: clamp(30vh, 40vh, 50vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+    text-align: center;
+}
+
+.maindata1 h2 {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 200;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.maindata1 button {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    padding-left: clamp(0.4rem, 1vw, 1.4rem);
+    padding-right: clamp(0.4rem, 1vw, 1.4rem);
+    padding-top: clamp(0.2rem, .5vw, .7rem);
+    padding-bottom: clamp(0.2rem, .5vw, .7rem);
+    border-radius: clamp(.3rem, .8vw, .5rem);
+    background-color: black;
+    color: white;
+}
+
+.maindata #exe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: clamp(.5rem, 1vw, 1rem);
+}
+
+.maindata #exe h3 {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+.maindata #exe span {
+    color: rgba(252, 182, 7, 0.952);
+    display: flex;
+    flex-direction: row;
+}
+
+.review {
+    width: 100%;
+    height: clamp(20rem, 30vw, 70rem);
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    background-color: rgb(253, 253, 253);
+
+}
+
+.review::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+
+    to {
+        translate: -100%;
+    }
+}
+
+.grp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: spin 18s infinite linear;
+    position: relative;
+    z-index: 1;
+}
+
+.review:hover .grp {
+    animation-play-state: paused;
+}
+
+.rew1 {
+
+    width: clamp(15rem, 40vw, 30rem);
+    height: clamp(12rem, 30vw, 15rem);
+    background-color: white;
+    border-radius: .8rem;
+    font-size: clamp(0.6rem, 1.3vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(1rem, 1vw, 2rem);
+    gap: clamp(0.5rem, 1vw, 2rem);
+}
+
+.rew1 .rdata {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 2rem);
+}
+
+.rew1 .rdata img {
+    width: clamp(2rem, 3vw, 10rem);
+    height: clamp(2rem, 3vw, 10rem);
+    object-fit: cover;
+}
+
+.rew1 .rdata p {
+    font-size: clamp(0.6rem, 1.3vw, 1.3rem);
+    font-family: serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.rew1 .writer {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.5rem, 0.8vw, 1rem);
+    align-items: center;
+}
+
+.rew1 .writer img {
+    width: clamp(2rem, 3vw, 10rem);
+    height: clamp(2rem, 3vw, 10rem);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.rew1 .writer #divr h2 {
+    font-size: clamp(0.6rem, 1.3vw, 1.3rem);
+}
+
+.rew1 .writer #divr h4 {
+    font-size: clamp(0.6rem, 1.3vw, 1.3rem);
+}
+
+.extra {
+    width: 100%;
+    height: clamp(15rem, 40vw, 25rem);
+    background-color: rgb(13, 13, 85);
+}
+
+.extra .not {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.extra .nt {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.txt {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: clamp(.6rem, 2vw, 1.1rem);
+    color: white;
+}
+
+.txt span {
+    font-size: clamp(1rem, 4vw, 3.5rem);
+}
+
+.txt p {
+    font-family: serif;
+    font-size: clamp(0.7rem, 1vw, 1.3rem);
+}
+
+.btn button {
+    padding-top: clamp(0.5rem, 1.4vw, 0.7rem);
+    padding-bottom: clamp(0.5rem, 1.4vw, 0.7rem);
+    padding-left: clamp(0.5rem, 1.4vw, 1rem);
+    padding-right: clamp(0.5rem, 1.4vw, 1rem);
+    border-radius: .5rem;
+    text-align: center;
+    font-size: clamp(0.5rem, 2vw, 1.3rem);
+}
+
+footer {
+    width: 100%;
+    margin: 1rem auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+footer .final {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.footer1 {
+    width: 100%;
+    height: auto;
+    /* height: clamp(13rem, 36vw, 22rem); */
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(.7rem, 1vw, 1rem);
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer1 .foot {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 1vw, 2rem);
+}
+
+.foot a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.5rem, 1.3vw, 2rem);
+}
+
+.Ho a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.Ho {
+    display: flex;
+    align-items: center;
+}
+
+.Ho a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#hh a {
+    font-size: clamp(1rem, 2vw, 2rem);
+
+}
+
+.hsn {
+    font-weight: bold;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+.host {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.host1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.Ho {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.2rem, 1vw, 2rem);
+    font-size: clamp(0.4rem, 1vw, 2rem);
+}
+
+.host .host1 img {
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: cover;
+}
+
+.ls {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: clamp(0.4rem, 1vw, 2rem);
+}
