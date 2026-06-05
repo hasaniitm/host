@@ -129,7 +129,7 @@ body {
 
     }
 
-    .navbar ul i {
+    .navbar ul #open {
         display: block;
     }
 }
