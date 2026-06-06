@@ -158,6 +158,8 @@ body {
 #h2 #div2 h3 {
     font-size: clamp(1rem, 5vw, 3rem);
     color: white;
+    Line-height:1;
+    weight:300;
 }
 
 #h2 #div2 p {
